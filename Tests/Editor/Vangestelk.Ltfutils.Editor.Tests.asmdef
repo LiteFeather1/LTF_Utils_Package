@@ -1,0 +1,14 @@
+{
+    "name": "Vangestelk.Ltfutils.Editor.Tests",
+    "references": [
+        "Vangestelk.Ltfutils.Editor",
+        "Vangestelk.Ltfutils"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

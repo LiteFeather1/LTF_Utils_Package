@@ -1,0 +1,19 @@
+{
+  "name": "com.vangestelk.ltf_utils",
+  "displayName": "LTF Utils",
+  "version": "1.0.0",
+  "unity": "6000.3",
+  "unityRelease": "1f1",
+  "dependencies": {
+    "com.unity.test-framework": "1.6.0"
+  },
+  "author": {
+    "name": "Litefeather",
+    "url": "https://github.com/LiteFeather1",
+    "email": "vangestelk@gmail.com"
+  },
+  "changelogUrl": "https://example.com/changelog.html",
+  "documentationUrl": "https://example.com/",
+  "licensesUrl": "https://example.com/licensing.html",
+  "description": "A collection of tools I use for developing Unity games. \n\n This repository primarily exist as a way for me to just share tools I personally use when making games. This project may be on constant in flux and not to be considered \"stables\". Use it on own account."
+}

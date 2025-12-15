@@ -1,0 +1,11 @@
+{
+    "name": "Vangestelk.Ltfutils.Tests",
+    "references": [
+        "Vangestelk.Ltfutils"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
