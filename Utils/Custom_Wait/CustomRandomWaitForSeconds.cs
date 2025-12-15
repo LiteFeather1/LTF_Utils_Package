@@ -6,16 +6,16 @@ namespace LTF.CustomWaits
     [System.Serializable]
     public class CustomRandomWaitForSeconds : IEnumerator
     {
-        [SerializeField] private Vector2 _randomWaitTime;
+        [SerializeField] private Vector2 _waitTimeRange;
         private float _waitTime;
         private float _elapsedTime = 0f;
 
         public CustomRandomWaitForSeconds() { }
 
-        public CustomRandomWaitForSeconds(Vector2 randomWaitTime)
+        public CustomRandomWaitForSeconds(Vector2 waitTimeRange)
         {
-            _randomWaitTime = randomWaitTime;
-            _waitTime = (randomWaitTime.x + randomWaitTime.y) * .5f;
+            _waitTimeRange = waitTimeRange;
+            _waitTime = (waitTimeRange.x + waitTimeRange.y) * .5f;
         }
 
         public object Current => null;
@@ -26,13 +26,14 @@ namespace LTF.CustomWaits
             bool flag = _elapsedTime < _waitTime;
             if (!flag)
                 Reset();
+
             return flag;
         }
 
         public void Reset()
         {
             _elapsedTime = 0f;
-            _waitTime = Random.Range(_randomWaitTime.x, _randomWaitTime.y);
+            _waitTime = Random.Range(_waitTimeRange.x, _waitTimeRange.y);
         }
     }
 }

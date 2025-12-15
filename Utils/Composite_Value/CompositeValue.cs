@@ -134,7 +134,7 @@ namespace LTF.CompositeValue
             _ => 0,
         };
 
-        #region Operator
+        #region Operators
 
         public static implicit operator float(CompositeValue a) => a.Value;
 

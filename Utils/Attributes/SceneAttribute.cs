@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace LTF
 {
+    /// <summary>
+    /// Attribued to help using scenes as fields.
+    /// </summary>
     public class SceneAttribute : PropertyAttribute { }
 
 #if UNITY_EDITOR

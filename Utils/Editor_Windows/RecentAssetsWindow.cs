@@ -8,9 +8,8 @@ using UnityEngine.SceneManagement;
 
 namespace LTF.Editor.Windows
 {
-    // ToDo: Could be neat to have a fuzzysearch textfield, tho is not necessary
+    // Todo: Could be neat to have a fuzzysearch textfield, tho is not necessary
     // Todo: Would be nice to have a small inheritance because this and RecentScriptablesWindow are almost the same thing but with a few changes +
-    // aaa
     public class RecentAssetsWindow : EditorWindow
     {
         private const string MENU_ITEM = "Tools/Recent Assets/";

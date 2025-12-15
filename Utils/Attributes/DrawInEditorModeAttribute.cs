@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace LTF
 {
+    /// <summary>
+    /// Shows inspector field only in editor mode. Hides during play mode.
+    /// </summary>
     public class DrawInEditorModeAttribute : PropertyAttribute
     {
         public bool InEditor { get; }

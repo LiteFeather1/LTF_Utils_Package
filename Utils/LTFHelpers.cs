@@ -21,6 +21,13 @@ namespace LTF.Utils
             }
         }
 
+        /// <summary>
+        /// Move a item from a position in an array to another swifting all other elements accordingly
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="a"></param>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
         public static void Move<T>(this T[] a, int from, int to)
         {
             var tmp = a[from];
@@ -34,6 +41,13 @@ namespace LTF.Utils
             a[to] = tmp;
         }
 
+        /// <summary>
+        /// Move a item from a position in a list to another swifting all other elements accordingly
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="l"></param>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
         public static void Move<T>(this List<T> l, int from, int to)
         {
             var tmp = l[from];
@@ -47,26 +61,53 @@ namespace LTF.Utils
             l[to] = tmp;
         }
 
+        /// <summary>
+        /// Picks a random element from an array
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
+        /// <returns></returns>
         public static T PickRandom<T>(this T[] array)
         {
             return array[Random.Range(0, array.Length)];
         }
 
-        public static T PickRandom<T>(this System.Collections.Generic.List<T> list)
+        /// <summary>
+        /// Picks a random element from a list
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public static T PickRandom<T>(this List<T> list)
         {
             return list[Random.Range(0, list.Count)];
         }
 
+        /// <summary>
+        /// Picks a random character from a string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static char PickRandom(this string s)
         {
             return s[Random.Range(0, s.Length)];
         }
 
+        /// <summary>
+        /// Converts a Layer Maks to a int flag layer. 
+        /// </summary>
+        /// <param name="layerMask"></param>
+        /// <returns></returns>
         public static int LayerMaskToLayer(this LayerMask layerMask)
         {
             return Mathf.RoundToInt(Mathf.Log(layerMask.value, 2f));
         }
 
+        /// <summary>
+        /// Counts true bools in a array
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static int CountTrue(params bool[] args)
         {
             int count = 0;
@@ -90,6 +131,12 @@ namespace LTF.Utils
         }
 
         #region Colour
+        /// <summary>
+        /// Helper method to change the alpha of a colour
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Color ChangeAlpha(this Color c, float a)
         {
             return new(c.r, c.g, c.b, a);
@@ -135,7 +182,8 @@ namespace LTF.Utils
                 Mathf.Sqrt((c1.r + c2.r) * .5f),
                 Mathf.Sqrt((c1.g + c2.g) * .5f),
                 Mathf.Sqrt((c1.b + c2.b) * .5f),
-                Mathf.Sqrt((c1.a + c2.a) * .5f));
+                Mathf.Sqrt((c1.a + c2.a) * .5f)
+            );
         }
 
         /// <summary>
@@ -151,10 +199,13 @@ namespace LTF.Utils
                 b += cs[i].b;
                 a += cs[i].a;
             }
-            return new(Mathf.Sqrt(r / cs.Length),
-                       Mathf.Sqrt(g / cs.Length),
-                       Mathf.Sqrt(b / cs.Length),
-                       Mathf.Sqrt(a / cs.Length));
+
+            return new(
+                Mathf.Sqrt(r / cs.Length),
+                Mathf.Sqrt(g / cs.Length),
+                Mathf.Sqrt(b / cs.Length),
+                Mathf.Sqrt(a / cs.Length)
+            );
         }
         #endregion
     }

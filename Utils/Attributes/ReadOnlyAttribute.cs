@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace LTF
 {
+    /// <summary>
+    /// Field cannot be edited in inspector
+    /// </summary>
     public class ReadOnlyAttribute : PropertyAttribute { }
 
 #if UNITY_EDITOR

@@ -20,15 +20,17 @@ namespace LTF.BiasedRandom
 
         public readonly float GetNumber()
         {
-            float r = Random.value * (_max - _min) + _min,
-                mix = Random.value * _influence;
+            float r = Random.value * (_max - _min) + _min;
+            float mix = Random.value * _influence;
+
             return r * (1f - mix) + _bias * mix;
         }
 
         public readonly float GetValue(float randomV, float randomVMix) 
         {
-            float r = randomV * (_max - _min) + _min,
-                mix = randomVMix * _influence;
+            float r = randomV * (_max - _min) + _min;
+            float mix = randomVMix * _influence;
+
             return r * (1f - mix) + _bias * mix;
         }
     }

@@ -21,6 +21,7 @@ namespace LTF.CustomWaits
             bool flag = _elapsedTime < _waitTime;
             if (!flag)
                 Reset();
+
             return flag;
         }
 

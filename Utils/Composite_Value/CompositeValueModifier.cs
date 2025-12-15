@@ -20,7 +20,8 @@ namespace LTF.CompositeValue
         public CompositeValueModifier(
             float value = 0f,
             CompositeValueModifierType type = CompositeValueModifierType.Flat,
-            object source = null)
+            object source = null
+        )
         {
             _value = value;
             _type = type;
@@ -29,7 +30,7 @@ namespace LTF.CompositeValue
 
         public CompositeValueModifier() : this(0f) { }
 
-        #region Operator
+        #region Operators
         public static implicit operator float(CompositeValueModifier a) => a._value;
 
         public static bool operator >(CompositeValueModifier lhs, CompositeValueModifier rhs) => lhs._value > rhs._value;
